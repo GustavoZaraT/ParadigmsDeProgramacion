@@ -1,0 +1,19 @@
+R -> escribir reemplazando
+esc -> salir de modo escritura
+i -> escribir insertando
+o -> abrir renglón abajo
+O -> abrir rengón arriba
+x -> borrar
+dd -> borrar todo el renglón
+D -> borrar renglón desde este espacio
+:w -> guardar
+:wq -> guardar y salir
+:q! -> salir sin guardar
+/palabra -> busacr "palabra"
+|->n -> buscar la siguente
+|->N -> buscar la anterior
+:# -> va a la línea #
+:$ -> va a la ultima línea
+~~~~~~~~~~~~~~~~~~~~~~~
+/*Manual de VI Zarate*/
+~~~~~~~~~~~~~~~~~~~~~~~
