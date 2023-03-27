@@ -134,5 +134,80 @@ z= 1+1j
 # módulo %
 # exponente **
 # // función piso
-# 
-#
+# Funciones para transformar números int() float() complex()
+# Operaciones abs() round() pow()
+
+print(round(3.14159, 4))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*String de varias líneas*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+parrafo = """ En el bosque de la china
+    la chunita de perdio """
+print(parrafo)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*La función len() obtiene el tamaño de string*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+n=len(parrafo)
+print(n)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Las letras en un string ocupan lugares como en un arreglo*/
+#((tambien de atrás para adelante comenzando en -1 el último))
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+palabra = "hola"
+print(palabra[0])
+print(palabra[-4])
+
+#~~~~~~~~~~~~~~~~~~~~~~
+#/*Conjunto en python*/
+#~~~~~~~~~~~~~~~~~~~~~~
+even_num = {2, 4, 6, 8, 10} # conjunto de números pares
+print(even_num)
+
+# El bool no es parte del conjunto
+wmp = {1, 'Steve', 10.5, True} # conjunto de diferentes objetos
+print(emp)
+
+nums = {1, 2, 2, 3, 4, 4, 5, 5}
+print(nums)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Convertir secuencia a conjunto*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*No lo genera en orden*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~
+s = set('Hello')
+print(s)
+
+s.add(100)
+print(s)
+
+s.update(nums)
+print(s)
+
+s.remove(100)
+print(s)
+
+s1 = {1, 2, 3, 4, 5}
+s2 = {4, 5, 6, 7, 8}
+
+su = s1|s2 # Unión
+print(su)
+
+si = s1 &s2 # Intersección
+print(si)
+
+#~~~~~~~~~~~~~~~~~~~~~~~
+#/*Uso de diccionarios*/
+#~~~~~~~~~~~~~~~~~~~~~~~
+capitals = {"USA" : "Washington D.C.", "France" : "Paris", "India" : "New Delhi"}
+print(capitals)
+
+#~~~~~~~~~~~~~~~~~
+#/*llave : valor*/
+#~~~~~~~~~~~~~~~~~
+
+#diccionario vacío
+d = {}
