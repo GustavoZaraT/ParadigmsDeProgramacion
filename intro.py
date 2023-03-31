@@ -29,7 +29,7 @@ print(type(t)) #bool
 print("Este es un comando de python. ", "Este es otro enunciado.", t)
 print('id: ', 1)
 print('First Name: ', 'Steve')
-print('Last Name', 'Jobs')
+print('Last Name:', 'Jobs')
 print("vamos a sumar esto " + "con esto otro")
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,11 +64,11 @@ if 10>5:
 for i in list:
     print(i)
     print("ok")
-if 10>5
+if 10>5:
     print("vredadero")
     if 10<20:
         print("verdadero")
-elif 5>3 # comienza segundo condicional
+elif 5>3: # comienza segundo condicional
     print ("esto no se imprimiria")
 else:
     print ("aquí nunca llega")
@@ -209,5 +209,48 @@ print(capitals)
 #/*llave : valor*/
 #~~~~~~~~~~~~~~~~~
 
-#diccionario vacío
+# Diccionario vacío
 d = {}
+
+# Llave entera, valor string
+numNames = {1 : "One", 2 : "Two", 3 : "Three"}
+
+# Llave real, valor string
+decNames = {1.5 : "one an Half", 2.5 : "Two an Half", 3.5 : "Three an Half"}
+
+# Llave tupla, valor string
+items = {("Parker", "Reynold", "Camlin") : "Pen", ("LG", "Whirlpool", "Samsung") : "Refrigerador"}
+
+# Llave string, valor int
+romanNums = {'I' : 1, 'II' : 2, 'III' : 3, 'IV' : 4, 'V' : 5}
+print(romanNums)
+print(romanNums["I"])
+
+print(capitals.get("India"))
+print(capitals.get("india"))
+
+# Reportar llave y valor
+for k in capitals:
+    print("Key = " + k + ", Value = " + capitals[k])
+
+# Nuevo dato para el diccionario
+capitals["México"] = "CDMX"
+print(capitals)
+
+# Borrar dato del diccionario
+del capitals["Mexico"]
+print(capitals)
+
+# Borrar todo el diccionario
+del capitals
+
+# Reportar llaves
+print (romanNums.key())
+
+# Reportar valores
+print(romanNums.values())
+
+# Juicio de llave (está o no está la llave en el diccionario)
+print("I" in romanNums)
+print("X" in romanNums)
+print("XX" in romanNums)
