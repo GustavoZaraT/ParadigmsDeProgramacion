@@ -14,6 +14,7 @@ D -> borrar renglón desde este espacio
 |->N -> buscar la anterior
 :# -> va a la línea #
 :$ -> va a la ultima línea
+. -> repetir ultima instrucción
 ~~~~~~~~~~~~~~~~~~~~~~~
 /*Manual de VI Zarate*/
 ~~~~~~~~~~~~~~~~~~~~~~~
