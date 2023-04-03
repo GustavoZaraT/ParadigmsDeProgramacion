@@ -47,12 +47,12 @@ print("Hola "); print("tu!!") #Se considera mala practica >:(
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #/*Usando paréntesis redondos, cuadrados o llaves se puede escrivir en varios renglones*/
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-list = [1, 2, 3, 4,
+lista = [1, 2, 3, 4,
         5, 6, 7, 8,
         9, 10, 11, 12]
 
 matriz = [ [1,2,3,4], [5,6,7,8], [9,10,11,12] ]
-print(list)
+print(lista)
 print(matriz)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -61,7 +61,7 @@ print(matriz)
 if 10>5:
     print("diez es mayor que cinco")
     print("otra identación")
-for i in list:
+for i in lista:
     print(i)
     print("ok")
 if 10>5:
@@ -167,7 +167,7 @@ even_num = {2, 4, 6, 8, 10} # conjunto de números pares
 print(even_num)
 
 # El bool no es parte del conjunto
-wmp = {1, 'Steve', 10.5, True} # conjunto de diferentes objetos
+emp = {1, 'Steve', 10.5, True} # conjunto de diferentes objetos
 print(emp)
 
 nums = {1, 2, 2, 3, 4, 4, 5, 5}
@@ -238,14 +238,14 @@ capitals["México"] = "CDMX"
 print(capitals)
 
 # Borrar dato del diccionario
-del capitals["Mexico"]
+del capitals["México"]
 print(capitals)
 
 # Borrar todo el diccionario
 del capitals
 
 # Reportar llaves
-print (romanNums.key())
+print (romanNums.keys())
 
 # Reportar valores
 print(romanNums.values())
@@ -254,3 +254,194 @@ print(romanNums.values())
 print("I" in romanNums)
 print("X" in romanNums)
 print("XX" in romanNums)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Listas*/
+#/*Las listas pueden ser objetos diferentes*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+miprimeralista = [] # Lista vacía
+print(miprimeralista)
+
+#~~~~~~~~~~~~~~~~~~~~
+#/*Llenado de lista*/
+#~~~~~~~~~~~~~~~~~~~~
+miprimeralista = [1, "Javier", 1.34, "Bosco", "Angel", "Abigail", True]
+print(miprimeralista)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*list: hacer una lista*/
+#/*range(i,j): secuencia de i hasta j-1*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nums = list(range(1,61))
+
+for i in nums:
+    print(i)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Incluir nuevos elementos en la lista*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nums.append(61)
+nums.append(62)
+nums.append(61)
+print(nums)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Quitar elementos de la lsta*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+nums.remove(61)
+print(nums)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Quitar elementos con índice i*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+i = 61
+del nums[i]
+print(nums)
+
+#~~~~~~~~~~~~~~~~~~~
+#/*Borrar la lista*/
+#~~~~~~~~~~~~~~~~~~~
+del nums
+
+#~~~~~~~~~~~~~~~~
+#/*Sumar listas*/
+#~~~~~~~~~~~~~~~~
+L1 = [1, 2, 3]
+L2 = [4, 5, 6]
+print(L1+L2)
+
+#~~~~~~~~~~~~~~~~~~
+#/*Llenado a mano*/
+#~~~~~~~~~~~~~~~~~~
+potencial = []
+for i in range(0,10000):
+    potencial.append(float(i))
+print(potencial[100])
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Generar una tupla con la lista*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+potencial = tuple(potencial)
+print(potencial[100])
+
+#~~~~~~~~~~~~~~~~~
+#/*Condicionales*/
+#~~~~~~~~~~~~~~~~~
+precio = 50
+# Si esto #
+if precio < 50:
+    print("El precio es menor que 50")
+# Si no... si esto otro... #
+elif precio > 50:
+    print("EL precio es mayor que 50")
+# Si nada de lo anterior #
+else:
+    print("El precio es 50")
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Condicioneales anidados*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+precio = 50
+cantidad = 5
+total = precio*cantidad
+if total > 100:
+    if total > 500:
+        print("Total es mayor que 500")
+    else:
+        if total < 500 and total > 400:
+            print("Total es menor que 500 pero mayor que 400")
+        elif total < 500 and total > 300:
+            print("Total entre 300 y 500")
+        else:
+            print("Total entre 100 y 300")
+# Condicioal de igualdad son == #
+elif total == 100:
+    print("Total es 100")
+else:
+    print("Total menor que 100")
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Contador mientras la conción sea verdadera*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+num = 0
+while num < 5:
+    num = num + 1
+    print('num = ', num)
+
+num = 0
+while num < 5:
+    num += 1                # num += 1 es lo mismo que num = num + 1
+    print('num = ', num)
+    if num == 3:            # condición antes de salir del bucle
+        break
+
+num = 0
+while num < 5:
+    num += 1
+    if num > 3:
+        continue            # evitar lo que sigue, continuar iteraciones
+    print('num = ', num)
+
+#~~~~~~~~~~~~~~~~~~~~~
+#/*Bucle sobre lista*/
+#~~~~~~~~~~~~~~~~~~~~~
+nums = [10, 20, 30, 40, 50]
+for i in nums:
+    print(i)
+
+#~~~~~~~~~~~~~~~~~~~~~~
+#/*Bucle sobre string*/
+#~~~~~~~~~~~~~~~~~~~~~~
+for char in 'Hello':
+    print (char)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Bucle sobre diccionario*/
+#     items = elementos
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~
+numNames = {1 : 'One', 2 : 'Two', 3 : 'Three'}
+for pair in numNames.items():
+    print(pair)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/* Bucle sobre diccionario */
+#  key = llave-value = valor
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+for k, v in numNames.items():
+    print("key = ", k, ", value = ", v)
+
+#~~~~~~~~~~~~~~~~~~~
+#/*Primera función*/
+#~~~~~~~~~~~~~~~~~~~
+def saludo():
+    # Documentación rápida de la función #
+    ''' Esta función saluda '''
+    print(' ¡Quiúboles!, ¿Cómo estás?')
+
+#~~~~~~~~~~~~~~~~~~~~~~~
+#/*Llamando la función*/
+#~~~~~~~~~~~~~~~~~~~~~~~
+saludo()
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Se ejecuta pero no se asigna*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+salida = saludo()
+
+#~~~~~~~~~~~~~~~~~~~~
+#/*Esto no funciona*/
+#~~~~~~~~~~~~~~~~~~~~
+print(salida)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Mostrar documentación*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~
+#help(saludo)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Función con argumento*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~
+def salu2(nombre):
+    ''' Esta función te saluda por tu nombre '''
+    print ("¡Qué onda ese ", nombre, "!")
+salu2("ZaraT")
+salu2("Ixchel")
