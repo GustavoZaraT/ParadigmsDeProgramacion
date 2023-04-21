@@ -523,7 +523,7 @@ print(a1)
 #/*Lambda de varoas variables*/
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 suma = lambda x1, x2, x3: x1 + x2 + x3
-print(suma(99m 98m 97))
+print(suma(99, 98, 97))
 
 sumas = lambda *x: x[0] + x[1] + x[2] + x[3]
 
@@ -533,3 +533,37 @@ print(sumas(100, 200, 300, 400))
 #/*Uso de una función anonima*/
 #/*El argumento va afuera entre parentesis*/
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print((lambda x: x * x)(6))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Funcion con variables global*/
+#/*Evite el EXCESO !!!!!!!!!!!!*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+name = 'Steve'
+def greet():
+    global name
+    name = 'Bill'
+    print('Hello ', name)
+
+greet()
+
+#~~~~~~~~~~~~~~~
+#/*Algoritmo 1*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#/*Series exponencial*/
+#/*Factorización de x*/
+#/*Negativos con funciones inversa*/
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+n = 200
+x = -100.0
+flag = False
+if x < 0:
+    flag = True
+    x = -x
+s = 1.0
+for i in range(n, 0, -1):
+    s *= x / float(i)
+    s += 1.0
+if flag == True:
+    s = 1 / s
+print(s)
