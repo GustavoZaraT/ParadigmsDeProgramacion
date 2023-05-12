@@ -9,7 +9,7 @@ class Curva:
     # Constructor
     def __init__(s, x : float = [], dim : int = 3):
         
-        s.x = np.arrey(x, dtype = np.float64)
+        s.x = np.array(x, dtype = np.float64)
         s.dim = dim
         s.n : np.int32 = int(len(s.x)/s.dim)    # Número de puntos
         s.l =[]                                 # Longitud sobre la curva
@@ -147,6 +147,6 @@ def zspline(puntos, dim, n, cont):
 
     for i in range(0, n):
         r : np.float64 = float(i) * dx
-        [x[i], y[i]] = curva.interpolación(contr, r)
+        [x[i], y[i]] = curva.interpolacion(cont, r)
     
     return x, y
