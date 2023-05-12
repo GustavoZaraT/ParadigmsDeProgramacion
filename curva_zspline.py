@@ -37,4 +37,3 @@ plt.xlabel("Coordenadas X")
 plt.ylabel("Coordenadas Y")
 plt.title("Curva cerrada Z-spline en 2D :P")
 plt.show()
-
