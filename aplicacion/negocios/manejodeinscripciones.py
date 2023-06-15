@@ -7,4 +7,4 @@ class ManejoDeInscripciones:
         print("----->Gusradndo usario ... \n")
         repositorioDeUsuarios.abrir()
         repositorioDeUsuarios.guardar(usuario)
-        repositorioDeUsuario.cerrar()
+        repositorioDeUsuarios.cerrar()
